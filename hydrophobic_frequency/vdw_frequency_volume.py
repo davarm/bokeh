@@ -104,7 +104,7 @@ print len(y_list_after)
 x_range=range(len(vdw_volume_list))
 print x_range
 p = figure(plot_width=400, plot_height=400)
-p.line(vdw_volume_list,y_list_before)
+p.line(vdw_volume_list,y_list_before,label=cat(columns='Secondary Structure',sort=False))
 
 #p.multi_line([x_range,x_range],[y_list_before,y_list_after],color=["firebrick", "navy"], alpha=[0.8, 0.3], line_width=4)
 
