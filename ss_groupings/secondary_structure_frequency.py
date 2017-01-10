@@ -10,7 +10,7 @@ secondary_structure_list=['Turn,Coil',
 'Strand,Coil',
 'Helix,Bridge',
 'Bridge,Turn',
-'Strand,Bridge',
+'Strand,Bridge',	
 'Turn,Turn',
 'Turn,Helix',
 'Strand,Helix',
@@ -56,4 +56,5 @@ for line in get:
 
 
 for key in secondary_structure_dict:
-	plotting_amino_acid_frequncy(secondary_structure_dict[key],key)
+	print key
+	plotting_amino_acid_frequncy(secondary_structure_dict[key],key) 

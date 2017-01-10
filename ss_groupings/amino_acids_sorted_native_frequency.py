@@ -107,11 +107,8 @@ def plotting_amino_acid_frequncy(ss_group,ss_title):
 		y_list_before.append((counts_before[value]))
 		y_list_after.append(counts_after[value])
 	
-	print len(y_list_before)
 	x_range=range(1,21)
-	print len(x_range)
-	print x_range
-	p = figure(plot_width=600, plot_height=400,x_range=amino_acids)
+	p = figure(plot_width=600, plot_height=400,x_range=amino_acids,title=ss_title)
 	#p.multi_line([x_range,x_range,x_range],[y_list_before,y_list_after,native_amino_freq],color=["darkmagenta", "mediumblue","black"], alpha=[0.9, 0.9,0.5], line_width=3)
 	#p.multi_line([x_range,x_range],[y_list_before,y_list_after],color=["darkmagenta", "mediumblue"], alpha=[0.9, 0.9], line_width=3, legend=["before",'after'])
 	
@@ -127,5 +124,7 @@ def plotting_amino_acid_frequncy(ss_group,ss_title):
 	p.yaxis.major_label_text_font_size='12pt'
 	p.yaxis.axis_label_text_font_size='13pt'
 	p.xaxis.axis_label_text_font_size='13pt'
+	output_file(ss_title+".html", title=ss_title)
 	show(p)
-	return()
+	kk=ss_title
+	return(kk)
